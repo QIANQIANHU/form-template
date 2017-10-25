@@ -10,6 +10,10 @@ $(document).ready(function() {
     var dateInput = $("#date").val();
     var sizeInput = $("#size").val();
     var locationInput = $("input:radio[name=location]:checked").val();
+
+    if (!nameInput || !timeInput || !dateInput || !sizeInput || !locationInput || !age) {
+      alert("please fill out all information!");
+    }
     var age = parseInt(prompt("How old are you?"));
 
 
@@ -26,10 +30,7 @@ $(document).ready(function() {
     $(".size").text(sizeInput);
     $(".location").text(locationInput);
 
-    // if (!nameInput || !timeInput || !dateInput || !sizeInput || !locationInput || !age);
-    // {
-    // alert("please fill out all information!");
-    // }
+
 
     $("#letter").show();
 });
